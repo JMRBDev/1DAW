@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 10 de JavaScript - Jose Rosendo</title>
+        <meta charset="UTF-8">
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+</head>
+
+    <body>
+        <h1>Ejercicio 10 de JavaScript</h1>
+        <h2>Relación 1 de ejercicios de Moodle</h2>
+        <hr>
+        <p>Jose Rosendo</p>
+
+        <div>
+            <p id="solucion"></p>
+            <script type="text/javascript">
+                var precioSinIVA = 123.45;
+                var iva = 21;
+                var resultado = precioSinIVA + iva;
+                document.getElementById("solucion").innerHTML = "El precio total es: " + (precioSinIVA+(precioSinIVA*iva)/100);
+            </script>
+
+        </div> 
+    </body>
+</html>

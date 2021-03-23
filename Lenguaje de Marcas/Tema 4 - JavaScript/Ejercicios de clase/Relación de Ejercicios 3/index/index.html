@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3ª Relación de Ejercicios - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <p id="logo">JOSE ROSENDO</p>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="assets/JS-Relacion_3-Jose_Rosendo.zip">Descargar</a></li>
+        </ul>
+    </nav>
+    <div id="tablaEjercicios">
+
+    </div>
+
+    <script type="text/javascript">
+        var files = ['01_par_o_impar.html', '02_mayusculas_o_minusculas.html', '03_es_palindromo.html', '04_piramide_altura_fija.html', '04_piramide.html', '05_piramide_altura_variable.html',
+                     '06_piramide_relleno_variable.html', '09_rectangulo_hueco.html', '13_es_primo.html', '15_potencia.html', '20_numero_de_aprobados.html',
+                     '27_tabla_posiciones_primas.html', '28_sumatorio_array.html', '30_numero_de_a_A.html'];
+        for (i = 0; i < files.length; i++) {
+            document.getElementById('tablaEjercicios').innerHTML += '<a href="../'+files[i]+'" target="_blank">'+files[i]+'</a></br>';
+        }
+    </script>
+</body>
+
+</html>

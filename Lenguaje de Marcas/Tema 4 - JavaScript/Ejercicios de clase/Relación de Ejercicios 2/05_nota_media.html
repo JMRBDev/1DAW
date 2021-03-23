@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 5 de JavaScript - Jose Rosendo</title>
+        <meta charset="UTF-8">
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+
+        <script type="text/javascript">
+            var nota1 = prompt("Introduce la nota de la primera evaluación: ")
+            var nota2 = prompt("Introduce la nota de la segunda evaluación: ")
+            var nota3 = prompt("Introduce la nota de la tercera evaluación: ")
+            
+            if (nota1 >= 5 && nota2 >= 5 && nota3 >= 5) {
+                alert("Nota media: " + (parseInt(nota1) + parseInt(nota2) + parseInt(nota3))/3)
+            }
+
+            else if (nota1 < 5 || nota2 < 5 || nota3 < 5) {
+                if (nota1 < 5) {
+                    alert("Debe recuperar la primera evaluación.")
+                }
+                else if (nota2 < 5) {
+                    alert("Debe recuperar la segunda evaluación.")
+                }
+                else if (nota3 < 5) {
+                    alert("Debe recuperar la tercera evaluación.")
+                }
+            }
+
+        </script>
+        
+    </head>
+
+    <body>
+        <h1>Ejercicio 5 de JavaScript</h1>
+        <h2>Relación 2 de ejercicios de Moodle</h2>
+        <hr>
+        <p>Jose Rosendo</p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 9 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 9 de JavaScript</h1>
+    <h2>Relación 4 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        function mediaDeArray() {
+            var miArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var resultado = 0;
+            for (var i = 0; i < miArray.length; i++) {
+                resultado += i;
+            }
+
+            return 'La media del array ' + miArray + ' es: ' + resultado/miArray.length;
+        }
+
+        document.write(mediaDeArray());
+    </script>
+</body>
+
+</html>

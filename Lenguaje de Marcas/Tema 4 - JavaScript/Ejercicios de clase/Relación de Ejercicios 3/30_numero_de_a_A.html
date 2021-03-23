@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 30 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        i {
+            background-color: #e8d451;
+            color: #9e5e03;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 30 de JavaScript</h1>
+    <h2>Relación 3 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+
+        var miCadena = prompt("Introduzca una cadena: ");
+        var aMin = 0;
+        var aMay = 0;
+        function contarA_a() {
+            debugger
+            miArray = miCadena.replace(' ', '').split('')
+            for (var i = 0; i < miArray.length; i++) {
+                if (miArray[i] == 'a') {
+                    aMin += 1;
+                } else if (miArray[i] == 'A') {
+                    aMay += 1;
+                }
+            }
+
+            if (aMin == 0 && aMay == 0) {
+                document.write('La cadena <i>' + miCadena + '</i> no contiene a minúscula ni A MAYÚSCULA.');
+            } else if (aMin > 0) {
+                document.write('La cadena <i>' + miCadena + '</i> contiene ' + aMin + ' a minúsculas.</br>');
+                if (aMay > 0) {
+                    document.write('La cadena <i>' + miCadena + '</i> contiene ' + aMay + ' A MAYÚSCULAS.');
+                }
+            }
+        }
+
+        contarA_a();
+
+    </script>
+</body>
+
+</html>

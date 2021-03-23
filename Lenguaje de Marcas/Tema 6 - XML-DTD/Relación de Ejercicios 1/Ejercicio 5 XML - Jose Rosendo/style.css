@@ -1,0 +1,24 @@
+/* Jose Rosendo Bienvenido */
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5px;
+}
+
+aula { 
+    color: white; 
+    background-color : #0C0C0C; 
+    width: 100%; 
+} 
+nombre { 
+    color: white; 
+    font-size : 40px; 
+    background-color : peru; 
+} 
+alumno, apellidos, telefono { 
+    display : block; 
+} 
+notaMedia { 
+    font-size : 25px; 
+    font-weight : bold; 
+}

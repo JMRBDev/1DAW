@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 3 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 3 de JavaScript</h1>
+    <h2>Relación 7 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <form name="intereses">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="input_nombre" name="nombre"><br /><br />
+        <label for="edad">Edad:</label>
+        <input type="number" id="input_edad" name="edad"><br /><br />
+        <label for="interes">Interés:</label>
+        <select id="interes" name="interes">
+            <option value="0">Elegir</option>
+            <option value="1">Interes 1</option>
+            <option value="2">Interes 2</option>
+            <option value="3">Interes 3</option>
+            <option value="4">Interes 4</option>
+        </select><br /><br />
+        <input type="button" value="Enviar" onclick="validarFormulario();">
+    </form>
+    <br /><br /><br /><br />
+    <p id="resultado_aqui"></p>
+
+    <script type="text/javascript">
+        function validarFormulario() {
+            var resultado_aqui = document.getElementById("resultado_aqui");
+            resultado_aqui.innerHTML = "";
+            var nombre = document.getElementById("input_nombre").value;
+            var edad = document.getElementById("input_edad").value;
+            var interes = document.getElementById("interes").value;
+            if (/^[A-Za-z]+$/.test(nombre) == false) {
+                alert("El nombre es incorrecto.");
+            }else{
+                resultado_aqui.innerHTML = resultado_aqui.innerText + "<br />Nombre correcto.";
+            }
+            debugger
+            if(parseInt(edad) < 18 || edad == "") {
+                alert("No es mayor de edad.");
+            }else{
+                resultado_aqui.innerHTML = resultado_aqui.innerText + "<br />Es mayor de edad.";
+            }
+            if (interes == 0) {
+                alert("Debe elegir un interés.")
+            }else{
+                resultado_aqui.innerHTML = resultado_aqui.innerText + "<br />Interés correcto.";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

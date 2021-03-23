@@ -1,0 +1,6 @@
+[
+  "test_calculadora.py::test_raiz[16-4]",
+  "test_calculadora.py::test_raiz[4-2]",
+  "test_calculadora.py::test_cuadrado",
+  "test_calculadora.py::test_newton_method"
+]

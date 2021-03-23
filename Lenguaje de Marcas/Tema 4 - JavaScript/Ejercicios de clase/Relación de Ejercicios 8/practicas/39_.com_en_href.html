@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 39 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;    
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 39 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <a href="">Párrafo 1</a><br />
+    <a href="https://www.google.com">Párrafo 2</a><br />
+    <a href="">Párrafo 3</a><br />
+    <a href="">Párrafo 4</a><br />
+    <a href="">Párrafo 5</a><br />
+    <a href="https://www.google.com">Párrafo 6</a><br />
+    <a href="https://www.google.com">Párrafo 7</a><br />
+    <button id="resaltar">Resaltar</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#resaltar").click(function() {
+                $("a").each(function() {
+                    if ($(this).attr("href").substring($(this).attr("href").toString().length - 4) == ".com") {
+                        $(this).css("background-color", "yellow");
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

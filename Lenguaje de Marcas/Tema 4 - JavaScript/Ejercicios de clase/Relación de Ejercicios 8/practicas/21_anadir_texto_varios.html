@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 21 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+
+        #plantillaI {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 21 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <img src="https://i.imgur.com/ciyEvTH.png">
+    <button id="cambiarParrafo">Añadir texto</button>
+    <p id="plantillaI">JQuery</p>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#cambiarParrafo").click(function() {
+                $("img").after(document.getElementById("plantillaI").innerText);
+                $("img").after("Love ");
+                $("img").after("<br />I ");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!ELEMENT escuela (curso+)>
+<!ELEMENT curso (nombre,duracion,descripcion,(becas|nobecas),aula,precio,semanas,profesores,temas)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT becas EMPTY>
+<!ELEMENT nobecas EMPTY>
+<!ELEMENT aula (nPlanta,nAula)>
+<!ELEMENT nPlanta (#PCDATA)>
+<!ELEMENT nAula (#PCDATA)>
+<!ELEMENT precio (precioAntiguos,precioNuevos)>
+<!ELEMENT precioAntiguos (#PCDATA)>
+<!ELEMENT precioNuevos (#PCDATA)>
+<!ELEMENT semanas (inicio,fin)>
+<!ELEMENT inicio (#PCDATA)>
+<!ELEMENT fin (#PCDATA)>
+<!ELEMENT profesores (profesor)>
+<!ELEMENT profesor (nombreProfesor, apellidos)>
+<!ELEMENT nombreProfesor (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT temas (tema)>
+<!ELEMENT tema (titulo,resumen,palabrasClave,ejercicios)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>
+<!ELEMENT palabrasClave (#PCDATA)>
+<!ELEMENT ejercicios (practicos,teoricos)>
+<!ELEMENT practicos (numeroPracticos,duracionPracticos)>
+<!ELEMENT numeroPracticos (CDATA)>
+<!ELEMENT duracionPracticos (#PCDATA)>
+<!ELEMENT teoricos (numeroTeoricos,duracionTeoricos)>
+<!ELEMENT numeroTeoricos (CDATA)>
+<!ELEMENT duracionTeoricos (#PCDATA)>
+
+<!ATTLIST curso identificador NCName #REQUIRED>
+<!ATTLIST aula informatica (si|no) "si">
+<!ATTLIST semanas horario (mañana|tarde) #REQUIRED>
+<!ATTLIST profesor tipo (teoria|practicas) #REQUIRED>
+<!ATTLIST tema numero NCName #REQUIRED>

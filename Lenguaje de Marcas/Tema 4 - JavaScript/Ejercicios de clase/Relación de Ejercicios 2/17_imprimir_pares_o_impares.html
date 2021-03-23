@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 17 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 17 de JavaScript</h1>
+    <h2>Relación 2 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        var parOImpar = prompt("¿Prefiere imprimir pares o impares?");
+        if (parOImpar.toLocaleLowerCase() == "pares") {
+            for (i = 0; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    document.write(i + "<br/>");
+                }
+            }
+        }
+        else if (parOImpar.toLocaleLowerCase() == "impares") {
+            for (i = 0; i <= 100; i++) {
+                if (i % 2 != 0) {
+                    document.write(i + "<br/>");
+                }
+            }
+        }
+        else {
+            document.write("Ha introducido un parámetro errórneo. Introduzca 'Pares' o 'Impares'.")
+        }
+    </script>
+</body>
+
+</html>

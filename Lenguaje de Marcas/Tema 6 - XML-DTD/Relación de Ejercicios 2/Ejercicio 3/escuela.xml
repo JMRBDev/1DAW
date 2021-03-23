@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE note SYSTEM "escuela.dtd">
+<!-- Jose Rosendo Bienvenido -->
+<escuela>
+	<curso identificador='0012'>
+		<nombre>Programación En Python</nombre>
+<duracion>40 semanas</duracion>
+<descripcion>Se aprenderá a programar en Python a nivel
+avanzado/profesional.</descripcion>
+<becas />
+<aula informatica='si'>
+	<nPlanta>1</nPlanta>
+	<nAula>130</nAula>
+<precio>
+	<precioAntiguos>900</precioAntiguos>
+	<precioNuevos>1199</precioNuevos>
+</precio>
+<semanas horario='mañana'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='tarde'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='mañana'>
+	<inicio>21/09/2020</inicio>
+	<fin>02/07/2021</fin>
+</semanas>
+<profesores>
+	<profesor tipo='teoria'>
+		<nombreProfesor>Julio</nombreProfesor>
+		<apellidos>Medina Ortega</apellidos>
+</profesor>
+<profesor tipo='practicas'>
+<nombreProfesor>Miguel Ángel</nombreProfesor>
+		<apellidos>García Rendón</apellidos>
+		</profesor>
+</profesores>
+<temas>
+	<tema numero='1'>
+		<titulo>Introducción a la
+programación</titulo>
+		<resumen>Se aprende la estructura básica en un
+programa hecho en Python</resumen>
+		<palabrasClave>Python, Debug, Variable,
+Función, Clase, Procedimiento, Integer,
+Boolean, Float</palabrasClave>
+		<ejercicios>
+			<practicos>
+				<numeroPracticos>1</numeroPracticos>
+				<duracionPracticos>60 minutos</duracionPracticos>
+			</practicos>
+			<teoricos>
+				<numeroTeoricos>1</numeroTeoricos>
+				<duracionTeoricos>20 minutos</duracionTeoricos>
+</ejercicios>
+<titulo>POO en Python</titulo>
+	<resumen>Se aprende la gestión de objetos y
+cómo funciona la programación orientada a
+estos</resumen>
+		<palabrasClave>Clases, Objetos, Direcciones de
+memoria, Herencia</palabrasClave>
+	<ejercicios>
+			<practicos>
+				<numeroPracticos>2</numeroPracticos>
+			<duracionPracticos>120 minutos</duracionPracticos>
+			</practicos>
+		<teoricos>
+				<numeroTeoricos>2</numeroTeoricos>
+				<duracionTeoricos>15 minutos</duracionTeoricos>
+</ejercicios>
+</tema>
+</temas>
+	</curso>
+	<curso identificador='0013'>
+		<nombre>Bases de Datos</nombre>
+<duracion>40 semanas</duracion>
+<descripcion>Se aprenderá a crear y administrar Bases de
+Datos SQL de manera profesional.</descripcion>
+<becas />
+<aula informatica='si'>
+	<nPlanta>1</nPlanta>
+	<nAula>131</nAula>
+<precio>
+	<precioAntiguos>900</precioAntiguos>
+	<precioNuevos>1199</precioNuevos>
+</precio>
+<semanas horario='mañana'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='tarde'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='mañana'>
+	<inicio>21/09/2020</inicio>
+	<fin>02/07/2021</fin>
+</semanas>
+<profesores>
+	<profesor tipo='teoria'>
+		<nombreProfesor>Manuel</nombreProfesor>
+		<apellidos>Andrade Fernández</apellidos>
+</profesor>
+<profesor tipo='practicas'>
+<nombreProfesor>José Manuel</nombreProfesor>
+		<apellidos>Jiménez Pabón</apellidos>
+		</profesor>
+</profesores>
+<temas>
+	<tema numero='1'>
+		<titulo>DML y DDL</titulo>
+		<resumen>Se aprende la teoría de los lenguajes
+DML y DDL</resumen>
+		<palabrasClave>Tabla, Columna, Registro,
+Atributo</palabrasClave>
+		<ejercicios>
+			<practicos>
+				<numeroPracticos>1</numeroPracticos>
+				<duracionPracticos>60 minutos</duracionPracticos>
+			</practicos>
+			<teoricos>
+				<numeroTeoricos>1</numeroTeoricos>
+				<duracionTeoricos>20 minutos</duracionTeoricos>
+</ejercicios>
+<titulo>MySQL Workbench</titulo>
+	<resumen>Se aprende a usar el software MySQL Workbench para gestionar Bases de Datos</resumen>
+		<palabrasClave>Panel de control, Conexion,
+Nombre de usuario, Contraseña</palabrasClave>
+	<ejercicios>
+			<practicos>
+				<numeroPracticos>2</numeroPracticos>
+			<duracionPracticos>120 minutos</duracionPracticos>
+			</practicos>
+		<teoricos>
+				<numeroTeoricos>2</numeroTeoricos>
+				<duracionTeoricos>15 minutos</duracionTeoricos>
+</ejercicios>
+</tema>
+</temas>
+	</curso>
+	<curso identificador='0014'>
+		<nombre>Lenguaje de Marcas</nombre>
+<duracion>40 semanas</duracion>
+<descripcion>Se aprenderá a crear aplicaciones web mediante el uso de lenguajes de marcas</descripcion>
+<becas />
+<aula informatica='si'>
+	<nPlanta>1</nPlanta>
+	<nAula>132</nAula>
+<precio>
+	<precioAntiguos>900</precioAntiguos>
+	<precioNuevos>1199</precioNuevos>
+</precio>
+<semanas horario='mañana'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='tarde'>
+	<inicio>15/09/2020</inicio>
+	<fin>21/06/2021</fin>
+</semanas>
+<semanas horario='mañana'>
+	<inicio>21/09/2020</inicio>
+	<fin>02/07/2021</fin>
+</semanas>
+<profesores>
+	<profesor tipo='teoria'>
+		<nombreProfesor>Anabel</nombreProfesor>
+		<apellidos>Benito Brijuelo</apellidos>
+</profesor>
+<profesor tipo='practicas'>
+<nombreProfesor>Marta</nombreProfesor>
+		<apellidos>Castro Guevara</apellidos>
+		</profesor>
+</profesores>
+<temas>
+	<tema numero='1'>
+		<titulo>XML</titulo>
+		<resumen>Se aprende a estructurar contenidos
+mediante XML</resumen>
+		<palabrasClave>Etiqueta, atributo, Validacion
+de código</palabrasClave>
+		<ejercicios>
+			<practicos>
+				<numeroPracticos>1</numeroPracticos>
+				<duracionPracticos>60 minutos</duracionPracticos>
+			</practicos>
+			<teoricos>
+				<numeroTeoricos>1</numeroTeoricos>
+				<duracionTeoricos>20 minutos</duracionTeoricos>
+</ejercicios>
+<titulo>HTML y CSS</titulo>
+	<resumen>Se aprende a crear sitios web
+Responsive con HTML y CSS</resumen>
+		<palabrasClave>Etiquetas, Scripts,
+Formularios, Dinámica,
+Estática</palabrasClave>
+	<ejercicios>
+			<practicos>
+				<numeroPracticos>2</numeroPracticos>
+			<duracionPracticos>120 minutos</duracionPracticos>
+			</practicos>
+		<teoricos>
+				<numeroTeoricos>2</numeroTeoricos>
+				<duracionTeoricos>15 minutos</duracionTeoricos>
+</ejercicios>
+</tema>
+</temas>
+	</curso>
+</escuela>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 21 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 21 de JavaScript</h1>
+    <h2>Relación 2 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        tabla = prompt("¿Qué tabla quieres ver? ");
+        if (tabla == 'todas') {
+            document.write("<h1>Tablas de multiplicar</h1>");
+            for (var i = 0; i < 11; i++) {
+                document.write("<table border='1'>");
+                for (var j = 0; j < 11; j++) {
+                    document.writeln("<tr><td>" + j + " x " + i + " = " + j*i + "</td></tr>");
+                }
+                document.write("</table></br>");
+            }
+        }
+        else {
+            document.write("<h1>Tabla del " + tabla + "</h1>");
+            document.write("<table border='1'>");
+            for (var i = 0; i < 11; i++) {
+                document.writeln("<tr><td>" + tabla + " x " + i + " = " + tabla*i + "</td></tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</body>
+
+</html>

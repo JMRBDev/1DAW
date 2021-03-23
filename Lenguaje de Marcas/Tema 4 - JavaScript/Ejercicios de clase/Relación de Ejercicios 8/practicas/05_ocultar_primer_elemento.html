@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 5 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 5 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <p>Lista 1:</p>
+    <ul id="lista1">
+        <li>Tortilla</li>
+        <li>Jamón</li>
+        <li>Queso</li>
+    </ul>
+    <p>Lista 2:</p>
+    <ul id="lista2">
+        <li>Coca Cola</li>
+        <li>Leche</li>
+        <li>Té</li>
+    </ul>
+    <button name="esconder" id="botonEsconder">Esconder</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("li:first").hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

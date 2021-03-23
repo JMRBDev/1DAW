@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 8 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 8 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <a href="https://www.youtube.es/" target="_blank">Enlace a Youtube - 'target="__blank"'</a><br />
+    <a href="https://www.google.es/" target="_self">Enlace a Google - 'target="__self"'</a><br /><br />
+    <button name="esconder" id="esconderBlank">Esconder con __blank</button>
+    <button name="esconder" id="esconderNoBlank">Esconder con __self</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#esconderBlank").click(function(){
+                $('a[target="_blank"').hide();
+            });
+            $("#esconderNoBlank").click(function(){
+                $('a[target="_self"').hide();
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>expr_aritmetica &#8212; documentación de Supercalculadora - v0.0.1</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para expr_aritmetica</h1><div class="highlight"><pre>
+<div class="viewcode-block" id="ExprAritmetica"><a class="viewcode-back" href="../expr_aritmetica.html#expr_aritmetica.ExprAritmetica">[documentos]</a><span></span><span class="k">class</span> <span class="nc">ExprAritmetica</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Clase que se encarga de la lógica del parser.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__es_numero__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cadena</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Comprueba si un operando es un número o no.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            cadena: Carácter que puede ser un número o no.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: True si la cadena es un número entero, False si no lo es.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">int</span><span class="p">(</span><span class="n">cadena</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="ExprAritmetica.parse"><a class="viewcode-back" href="../expr_aritmetica.html#expr_aritmetica.ExprAritmetica.parse">[documentos]</a>    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exp</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parsea la expresión a una expresión entendible por el programa.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            exp: Expresión que hay que parsear para que sea utilizable.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Diccionario que contiene los operandos y los operadores separados y ordenados</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">operandos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">operadores</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__es_numero__</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+                <span class="n">operandos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">token</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">operadores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;Operandos&#39;</span><span class="p">:</span> <span class="n">operandos</span><span class="p">,</span> <span class="s1">&#39;Operadores&#39;</span><span class="p">:</span> <span class="n">operadores</span><span class="p">}</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Supercalculadora</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, JMRBDev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

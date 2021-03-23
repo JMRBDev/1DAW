@@ -1,0 +1,344 @@
+<html>
+
+<head>
+   <title>1.6 - Jose Rosendo</title>
+   <style>
+      html {
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .card {
+         max-width: 500px;
+         border-radius: 4px;
+         background: #fff;
+         box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+         transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+         padding: 14px 80px 18px 36px;
+         cursor: pointer;
+      }
+
+      .card:hover {
+         transform: scale(1.05);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Relación 2 XSLT - Jose Rosendo</h1>
+   <h2>Ejercicio 1.6</h2>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Eros Ramazzotti</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">EU</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Andrea Bocelli</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">EU</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Savage Rose</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">EU</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Kim Larsen</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">EU</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Simply Red</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">EU</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Jorn Hoel</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">Norway</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Bonnie Tyler</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Gary Moore</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Bee Gees</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Dr.Hook</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Rod Stewart</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Kenny Rogers</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Van Morrison</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Cat Stevens</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Sam Brown</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">T'Pau</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Tina Turner</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Luciano Pavarotti</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">The Communards</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">UK</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Bob Dylan</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Dolly Parton</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Percy Sledge</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Many</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Will Smith</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Otis Redding</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+   <div class="col-md-4">
+      <div class="card card-1">
+         <p>
+            <span style="font-weight: bold; font-size:35px">ARTISTA:</span>
+            <span style="color:gold; font-size:30px; font-weight:bold;">Joe Cocker</span>
+            <br />
+            <span style="font-weight: bold; font-size:35px">PAÍS:</span>
+            <span style="color:peru; font-size:20px">USA</span>
+            <br />
+         </p>
+      </div>
+   </div>
+</body>
+
+</html>

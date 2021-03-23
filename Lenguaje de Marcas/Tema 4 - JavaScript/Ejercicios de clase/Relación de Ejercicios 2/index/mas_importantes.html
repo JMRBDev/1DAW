@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicios más importantes - 2ª Relación de Ejercicios - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <p id="logo">JOSE ROSENDO</p>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#" class="active">Ejercicios más importantes</a></li>
+            <li><a href="assets/Relación de Ejercicios 2 - Jose Rosendo.rar">Descargar</a></li>
+        </ul>
+    </nav>
+    <div id="tablaEjercicios">
+
+    </div>
+
+    <script type="text/javascript">
+        var files = ['03_tiene_espacios.html', '05_nota_media.html',
+                     '09_letra_dni.html', '10_cara_o_cruz.html',
+                     '12_factoriales.html', '14_linea_de_asteriscos.html',
+                     '17_imprimir_pares_o_impares.html',
+                     '21_tablas_de_multiplicar.html', '22_triangulo.html',
+                     '23_es_primo.html', '24_tiene_que_ser_positivo.html', '24_notas_2.html'];
+        for (i = 0; i < files.length; i++) {
+            document.getElementById('tablaEjercicios').innerHTML += '<a href="../'+files[i]+'" target="_blank">'+files[i]+'</a></br>';
+        }
+    </script>
+</body>
+
+</html>

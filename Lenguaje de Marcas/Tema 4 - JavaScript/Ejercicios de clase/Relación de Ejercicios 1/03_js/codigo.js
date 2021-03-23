@@ -1,0 +1,1 @@
+var alerta = alert('Este sitio web no usa cookies de terceros.');

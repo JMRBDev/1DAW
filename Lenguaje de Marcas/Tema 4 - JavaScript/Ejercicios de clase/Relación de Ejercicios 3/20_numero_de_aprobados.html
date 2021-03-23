@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 20 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 20 de JavaScript</h1>
+    <h2>Relación 3 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        function notasClase() {
+            var notas = prompt("Introduzca las notas separadas por comas: ");
+            var aprobados = [];
+            var suspensos = [];
+            var notasArray = notas.split(",")
+            notasArray.forEach(nota => {
+                if (nota < 5) {
+                    suspensos.push(nota);
+                } else if (nota >= 5 && nota < 10) {
+                    aprobados.push(nota);
+                }
+            });
+            document.write('Aprobados: ' + aprobados.length);
+            document.write('</br>Suspensos: ' + suspensos.length);
+
+            var total = 0;
+            aprobados.forEach(aprobado => {
+                total += parseFloat(aprobado);
+            });
+            suspensos.forEach(suspenso => {
+                total += parseFloat(suspenso);
+            });
+            
+            document.write('</br>Media: ' + total/(aprobados.length + suspensos.length));
+        }
+
+        notasClase();
+
+    </script>
+</body>
+
+</html>

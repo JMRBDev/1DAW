@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>5ª Relación de Ejercicios - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Rosendo">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <p id="logo">JOSE ROSENDO</p>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="assets/JS-Relacion_5-Jose_Rosendo.zip">Descargar</a></li>
+        </ul>
+    </nav>
+    <div id="tablaEjercicios">
+
+    </div>
+
+    <script type="text/javascript">
+        var files = ['practicas/12_quitar_letra_dni.html', 'practicas/13_quitar_nums_dni.html', 'practicas/14_primeros_chars_dni.html', 'practicas/15_ultimos_chars_dni.html', 'practicas/16_correo_electronico.html'];
+        for (i = 0; i < files.length; i++) {
+            document.getElementById('tablaEjercicios').innerHTML += '<a href="../'+files[i]+'" target="_blank">'+files[i].split('/')[1]+'</a></br>';
+        }
+    </script>
+</body>
+
+</html>

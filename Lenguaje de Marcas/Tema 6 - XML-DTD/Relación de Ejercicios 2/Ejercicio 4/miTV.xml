@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "miTV.dtd">
+<TVSCHEDULE name="100221">
+    <CHANNEL chan="1293">
+        <BANNER>Contenido de Banner</BANNER>
+        <DAY>
+            <DATE>Contenido de Date</DATE>
+            <HOLYDAY>Contetnido de Holiday</HOLYDAY>
+        </DAY>
+    </CHANNEL>
+    <CHANNEL chan="0172">
+        <BANNER>Contenido de Banner</BANNER>
+        <DAY>
+            <DATE>Contenido de Date</DATE>
+            <PROGRAMSLOT vtr="18">
+                <TIME>Contenido de Time</TIME>
+                <TITLE rating="16" language="12">Contenido de Title</TITLE>
+                <DESCRIPTION>Contenido de Description</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DAY>
+    </CHANNEL>

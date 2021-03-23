@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+html * {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+html body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #4A4A4A;
+}
+
+#logo {
+    float: right;
+    margin-right: 40px;
+    font-size: 20pt;
+    color: white;
+    font-weight: 800;
+    padding: 6px;
+}
+
+#navbar {
+    background-color: #333;
+    -webkit-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: black;
+}
+
+#tablaEjercicios {
+    margin: 100px auto;
+    padding: 10px 0;
+    width: 40%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 39px 5px rgba(0, 0, 0, 0.75);
+}
+
+#tablaEjercicios > a:link {
+    color: white;
+    text-decoration: none;
+}
+
+#tablaEjercicios > a:visited {
+    color: teal;
+}
+
+#tablaEjercicios > a:hover {
+    color: skyblue;
+}
+
+.active {
+    background-color: black;
+}

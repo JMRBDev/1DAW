@@ -1,0 +1,291 @@
+#+TITLE:    Documentación automática en Python con Sphinx y Pdoc3
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
+#+OPTIONS: texht:t toc:nil num:nil -:nil ^:{} ":nil ':nil
+#+OPTIONS: tex:t
+#+LATEX_CLASS: article
+#+LATEX_HEADER:
+#+LANGUAGE: es
+#+LATEX_HEADER: \usepackage[AUTO]{babel}
+
+#+LATEX_HEADER_EXTRA: \usepackage{mdframed}
+#+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
+#+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
+#+LATEX: \setlength\parindent{0pt}
+
+#+latex_header: \usepackage[utf8]{inputenc} %% For unicode chars
+#+LATEX_HEADER: \usepackage{placeins}
+
+#+LATEX_HEADER: \usepackage[margin=2.50cm]{geometry}
+
+#+LaTeX_HEADER: \usepackage[T1]{fontenc}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \linespread{1.05}
+#+LaTeX_HEADER: \usepackage[scaled]{helvet}
+#+LaTeX_HEADER: \usepackage{courier}
+
+#+LaTeX_HEADER: \hypersetup{colorlinks=true,linkcolor=blue}
+#+LATEX_HEADER: \RequirePackage{fancyvrb}
+#+LATEX_HEADER: \DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\small,formatcom = {\color[rgb]{0.5,0,0}}}
+
+
+* Documentación en Python
+#+begin_quote
+Documentation is like sex: when it is good, it is very, very good;
+and when it is bad, it is better than nothing.
+— Dick B.
+#+end_quote
+
+Muchas veces, un trabajo en el que hemos puesto mucho esfuerzo no lo
+usa nadie por el simple hecho de que la única documentación que
+tenemos es un Readme: nadie sabe usar lo que hemos hecho. Y aunque una
+mala documentación es mejor que nada, a veces, no hay nada como una
+buena documentación :-).
+
+
+** Sphinx
+*[[https://www.sphinx-doc.org/es/master/][Sphinx]]* es una de esas herramientas para generar documentación
+ automáticamente (y mucho más) a partir de nuestro código.
+
+*** Setup
+- Dentro del directorio de nuestro proyecto creamos un directorio
+- Y nos movemos a ese directorio
+- Comandos validos para Linux, git-bash, o la terminal de WSL si
+  tenemos el sistema de Linux para Windows 10 instalado. Si no es el
+  caso, adapta los comandos según corresponda.
+#+BEGIN_SRC bash
+mkdir docs
+cd docs
+#+END_SRC
+*** Inicialización
+- Inicialización de la estructura y archivos varios para generar la
+  documentación.
+#+BEGIN_SRC bash
+sphinx-quickstart
+#+END_SRC
+ + Después de ese comando vamos respondiendo a las preguntas con un
+   sí(y) o un no (n) según se vayan haciendo.
+
+#+BEGIN_SRC bash
+> Separate source and build directories (y/n) [n]: y
+> Name prefix for templates and static dir [_]:
+> Project name: Ejemplos
+> Author name(s): wathever
+> Project release []: 1.v4-10
+> Project language [en]: es
+> Source file suffix [.rst]:
+> Name of your master document (without suffix) [index]:
+> autodoc: automatically insert docstrings from modules (y/n) [n]: y
+---opcional contestar y a las siguientes
+> doctest: automatically test code snippets in doctest blocks (y/n) [n]: y
+> intersphinx: link between Sphinx documentation of different projects (y/n) [n]: y
+> todo: write "todo" entries that can be shown or hidden on build (y/n) [n]: y
+> coverage: checks for documentation coverage (y/n) [n]: y
+> imgmath: include math, rendered as PNG or SVG images (y/n) [n]: n
+> mathjax: include math, rendered in the browser by MathJax (y/n) [n]: n
+> ifconfig: conditional inclusion of content based on config values (y/n) [n]: y
+> viewcode: include links to the source code of documented Python objects (y/n) [n]: y
+> githubpages: create .nojekyll file to publish the document on GitHub pages (y/n) [n]: n
+
+A Makefile and a Windows command file can be generated for you so that you
+only have to run e.g. `make html' instead of invoking sphinx-build
+directly.
+> Create Makefile? (y/n) [y]: y
+
+--- en windows habría que responder 'y' a la siguiente
+> Create Windows command file? (y/n) [y]: n
+Creating file ./source/conf.py.
+Creating file ./source/index.rst.
+Creating file ./Makefile.
+
+Finished: An initial directory structure has been created.
+
+You should now populate your master file ./source/index.rst and create other documentation
+source files. Use the Makefile to build the docs, like so:
+   make builder
+where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
+#+END_SRC
+
+A la de generar/incluir
+   autodocs responder que sí (y). También decimos que sí a tener
+   directorios sparados para build (resultado final construido) y para
+   los fuentes (ficheros .rst).
+
+*** Personalización/retoques de la configuración
+- Se habrá creado un directorio =source/= y dentro habrá un fichero
+  =conf.py= que tendremos que editar. Las líneas que aparecen a
+  continuación aparecen comentadas. Hay que descomentarlas y modificar
+  el =abspath= para que coincida con el directorio donde tenemos
+  nuestros ficheros fuente. En mi caso dos directorios por encima del actual.
+#+BEGIN_SRC python
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../..'))
+#+END_SRC
+
+*** Extraer la información de los fichero de código fuente .py
+- Generar los ficheros =.rst= con =sphinx-apidoc=, también sería
+  posible utilizar =sphinx-autogen= u otras herramientas. Sphinx es,
+  ya no un mundo, todo universo.
+#+BEGIN_SRC bash
+sphinx-apidoc -f -o source/ ..
+#+END_SRC
+
+   + En este caso '-o' indica que a continuación viene el directorio
+     donde se van a situar los ficheros =.rst= con la documentación
+     extraída de los ficheros fuente =.py=.
+
+   + Con =..= indicamos el directorio donde están los ficheros fuente
+     =.py=. En este caso es el directoriio padre. Es corriente tener
+     un directorio =src= donde meter los fuentes. Si fuera el caso, en
+     lugar de =..=, habríamos puesto =../src=.
+
+
+
+(Para =autogen= hay que hacer otras modificaciones en =conf.py=. Hay
+que localizar =extensions=, añadir =sphinx.ext.autosummary=, y crear
+la variable =autosummary_generate = True=. Si queremos utilizar el
+estilo Google para los comentarios de auto documentación deberemos
+utilizar el plugin =sphinx.ext.napoleon= que habrá que instalar con pip
+
+#+BEGIN_SRC python
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.doctest',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.autosummary',
+# napoleon es necesario para la sintaxis tipo Google
+    'sphinx.ext.napoleon'
+]
+#+END_SRC
+
+Podemos excluir ficheros en la generación de la documentación
+incluyéndolos en la lista
+#+BEGIN_SRC python
+exclude_patterns = ['pages/reference-architecture', 'some/other/file.txt']
+#+END_SRC
+
+)
+*** Generar la documentación
+Ya sólo queda generar la documentación el el formato que más nos
+interese.  Podemos ejecutar el comando =make= sin nada más, para ver
+los formatos disponibles y pasarle el adecuado, según el tipo de
+documentación que queramos generar. Para *html*
+#+BEGIN_SRC bash
+make html
+#+END_SRC
+Podemos generar *.pdf* siempre que tengamos *LaTeX* instalado
+#+BEGIN_SRC bash
+make latexpdf
+#+END_SRC
+
+**** Estado de nuestro directorio al final del proceso
+
+Una vez finalizado todo el proceso, la estructura del directorio donde
+hemos realizado el proceso quedaría similar a (considerando que =.=
+es donde tenemos los ficheros fuente =.py=. Podría darse el caso de
+tener un directorio =src= con los fuentes, en cuyo caso la estructura
+cambiaría algo) :
+
+#+BEGIN_SRC ascii
+.
+├── docs
+│   ├── build
+│   │   ├── doctrees
+│   │   └── html
+│   │       ├── _modules
+│   │       ├── _sources
+│   │       └── _static
+│   └── source
+│       ├── _static
+│       └── _templates
+└── __pycache__
+
+#+END_SRC
+
+
+*** Ejemplo de docstrings tipo Google vs. el nativo de sphinx:
+- Google:
+#+BEGIN_SRC python
+Args:
+    path (str): The path of the file to wrap
+    field_storage (FileStorage): The :class:`FileStorage` instance to wrap
+    temporary (bool): Whether or not to delete the file when the File
+       instance is destructed
+
+Returns:
+    BufferedFileStorage: A buffered writable file descriptor
+#+END_SRC
+
+- Nativo de Sphinx:
+#+BEGIN_SRC pyton
+:param path: The path of the file to wrap
+:type path: str
+:param field_storage: The :class:`FileStorage` instance to wrap
+:type field_storage: FileStorage
+:param temporary: Whether or not to delete the file when the File
+   instance is destructed
+:type temporary: bool
+:returns: A buffered writable file descriptor
+:rtype: BufferedFileStorage
+#+END_SRC
+
+- Más información sobre Napoleon: [[https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html][sphinx.ext.napoleon]]
+
+*** Para saber más
+   - Tutorial con más opciones
+     + [[https://matplotlib.org/sampledoc/][Sampledoc Tutorial]]
+   - Modificar el [[https://www.sphinx-doc.org/en/master/usage/theming.html][tema html]]
+   - Las opciones básicas de reStructuredtext
+     + [[https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-inline-markup][Restructuredtext Primer]]
+
+** PDOC3
+*** Auto-generate API documentation for Python projects
+*[[https://pdoc3.github.io/pdoc/][pdoc3]]*  simplifica mucho la generación
+de la documentación a cambio de mucho menor control (con templates
+=mako=) en lo que se genera (sólo =html= y =pdf=). Como *Sphinx*
+soporta markdown, numpydoc, Google-style docstrings, Napoleon,
+doctests, y en menor media reST, por lo que es mejor usar el estilo de
+Google u otro antes que reST, si vamos a utilizar pdoc3.
+
+[[https://pdoc3.github.io/pdoc/doc/pdoc/#gsc.tab=0][Documentación de pdoc]]
+
+*** Instalación
+#+BEGIN_SRC bash
+pip3 install pdoc3
+#+END_SRC
+
+*** Uso
+Si queremos generar la documentación en =html= de los fuentes en el
+directorio =src=, haremos:
+#+BEGIN_SRC bash
+pdoc --html src
+#+END_SRC
+
+Así que se puede ver que es mucho más fácil de usar que *Sphinx*
+
+
+** Entrega Documentación de Supercalculadora
+- Es suficiente con documentar los fuentes.
+
+  + Si alguien cree conveniente documentar algún fichero de test,
+    puede hacerlo.
+    * Los ficheros sin documentación deben ser excluidos y no generar
+      documentación.
+
+- Se valorará la utilización de warnings, notas etc. sobre todo
+  aplicables en un par de funciones bastante especiales (pista, una es
+  dividir).
+
+- Se valorará el uso de un tema diferente al estándar.
+
+- Hay que utilizar Sphinx.
+  + Como extra se puede entregar también lo creado con Pdoc3.
+
+- La entrega será un archivo .zip o .tar.gz con la estructura de
+  directorios del proyecto.

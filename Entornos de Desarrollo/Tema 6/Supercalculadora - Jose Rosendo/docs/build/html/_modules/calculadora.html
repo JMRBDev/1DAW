@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>calculadora &#8212; documentación de Supercalculadora - v0.0.1</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para calculadora</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Calculadora básica que solo suma, resta y divide.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Calculadora"><a class="viewcode-back" href="../calculadora.html#calculadora.Calculadora">[documentos]</a><span class="k">class</span> <span class="nc">Calculadora</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Esta es la clase principal del programa.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Calculadora.sumar"><a class="viewcode-back" href="../calculadora.html#calculadora.Calculadora.sumar">[documentos]</a>    <span class="k">def</span> <span class="nf">sumar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Función que agrega un número a otro.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            a: Primer sumando.</span>
+<span class="sd">            b: Segundo sumando.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            a y b agregados entre sí (suma).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span></div>
+
+<div class="viewcode-block" id="Calculadora.restar"><a class="viewcode-back" href="../calculadora.html#calculadora.Calculadora.restar">[documentos]</a>    <span class="k">def</span> <span class="nf">restar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Función que sustrae un número a otro.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            a: Minuendo.</span>
+<span class="sd">            b: Sustraendo.</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            b sustraído de a (diferencia).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span></div>
+
+<div class="viewcode-block" id="Calculadora.dividir"><a class="viewcode-back" href="../calculadora.html#calculadora.Calculadora.dividir">[documentos]</a>    <span class="k">def</span> <span class="nf">dividir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Función que divide un número entre otro.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            a: Dividendo.</span>
+<span class="sd">            b: Divisor.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Cociente de la división entre a y b.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="ne">ZeroDivisionError</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="ne">ValueError</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">a</span> <span class="o">//</span> <span class="n">b</span>  <span class="c1"># En Python 2.x esto funciona sin problemas, pero en Python 3, no. ¿Sabes arreglarlo?</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Supercalculadora</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, JMRBDev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

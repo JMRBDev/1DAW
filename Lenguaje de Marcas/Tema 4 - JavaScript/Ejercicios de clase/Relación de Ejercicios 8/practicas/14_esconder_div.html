@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 14 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 14 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <div>
+        <button>Esconder 1</button>
+        <h3>Párrafo 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat pulvinar tincidunt. Etiam posuere erat metus, nec molestie mi commodo aliquet. Etiam ultrices sem eu porta volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Aliquam metus eros, ultrices a mauris vel, fringilla finibus nibh. Quisque posuere pharetra lectus id rhoncus.
+
+            Sed a suscipit massa, sit amet lobortis lectus. Mauris bibendum purus ut ipsum auctor, et hendrerit lacus consectetur. Nullam porta magna tellus, ultrices sollicitudin risus feugiat in. Etiam non ligula tellus. Phasellus dolor nisi, interdum in feugiat a, volutpat ut sem. Ut sit amet ultrices ligula. Integer pulvinar varius congue. Sed eget leo nec ante facilisis ultrices ac ullamcorper nibh. Vivamus eget eros id lectus tristique elementum. Vivamus vel dolor convallis, imperdiet mauris a, sodales orci. Vivamus ut quam purus. Quisque pellentesque at mi eu accumsan. In hac habitasse platea dictumst.</p>
+    </div>
+    <div>
+        <button>Esconder 2</button>
+        <h3>Párrafo 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis feugiat pulvinar tincidunt. Etiam posuere erat metus, nec molestie mi commodo aliquet. Etiam ultrices sem eu porta volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam erat volutpat. Aliquam metus eros, ultrices a mauris vel, fringilla finibus nibh. Quisque posuere pharetra lectus id rhoncus.
+
+            Sed a suscipit massa, sit amet lobortis lectus. Mauris bibendum purus ut ipsum auctor, et hendrerit lacus consectetur. Nullam porta magna tellus, ultrices sollicitudin risus feugiat in. Etiam non ligula tellus. Phasellus dolor nisi, interdum in feugiat a, volutpat ut sem. Ut sit amet ultrices ligula. Integer pulvinar varius congue. Sed eget leo nec ante facilisis ultrices ac ullamcorper nibh. Vivamus eget eros id lectus tristique elementum. Vivamus vel dolor convallis, imperdiet mauris a, sodales orci. Vivamus ut quam purus. Quisque pellentesque at mi eu accumsan. In hac habitasse platea dictumst.</p>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("button").click(function() {
+                $(this).parent().hide();
+            })
+        });
+
+    </script>
+</body>
+
+</html>

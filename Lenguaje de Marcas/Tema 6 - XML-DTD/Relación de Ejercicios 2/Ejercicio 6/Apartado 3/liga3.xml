@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "liga3.dtd">
+<liga>
+    <partido equipoLocal="Nottingham Presa" equipoVisitante="Inter de Mitente" golesLocal="0" golesVisitante="1">
+    </partido>
+
+    <partido equipoLocal="Vodka Juniors" equipoVisitante="Sparta da Risa" golesLocal="3" golesVisitante="3">
+    </partido>
+
+    <partido equipoLocal="Water de Munich" equipoVisitante="Esteaua es del grifo" golesLocal="4" golesVisitante="2">
+    </partido>
+</liga>

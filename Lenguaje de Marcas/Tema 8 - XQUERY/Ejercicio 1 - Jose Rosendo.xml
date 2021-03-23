@@ -1,0 +1,33 @@
+# 1.- Consigue el nombre de los módulos que se imparten en el instituto (elemento).
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+return $x/nombre
+
+# 2.- Muestra el nombre de los módulos del ciclo ASIR (contenido).
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+where $x/ciclo = "ASIR"
+return $x/nombre/text()
+
+# 3.- Devuelve el nombre de los módulos que se imparten en el segundo curso de cualquier ciclo (elemento).
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+where $x/curso = 2
+return $x/nombre
+
+# 4.- Devuelve el nombre de los módulos que se imparten en el primer curso de ASIR (elemento) y ordénalos alfabéticamente.
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+where $x/ciclo = "ASIR" and $x/curso = 1
+order by $x/nombre ascending
+return $x/nombre
+
+# 5.- Obtén el nombre de los módulos con menos de 5 horas semanales (contenido).
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+where $x/horasSemanales < 5
+return $x/nombre
+
+# 6.- Devuelve el número de módulos que se imparten en el primer curso de ASIR (número).
+let $parent := /ies/modulos
+return count($parent/modulo[curso/text() = 1 and ciclo/text() = "ASIR"])
+
+# 7.- Muestra las horas semanales de los módulos con más de 3 horas semanales (contenido).
+for $x in doc("ejercicio_1_modulos_informatica.xml")/ies/modulos/modulo
+where $x/horasSemanales > 3
+return $x/horasSemanales/text()

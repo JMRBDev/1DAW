@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 51 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;    
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 51 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <p id="parrafo1">Este es el párrafo 1.</p>
+    <p id="parrafo2">Este es el párrafo 2.</p>
+    <p id="parrafo3">Este es el párrafo 3.</p>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#parrafo1").click(function() {
+                $(this).css({"font-size" : parseInt($(this).css("font-size"))+3, "letter-spacing" : parseInt($(this).css("letter-spacing"))+3});
+            });
+            $("#parrafo2").click(function() {
+                $(this).css({"font-size" : parseInt($(this).css("font-size"))+3, "letter-spacing" : parseInt($(this).css("letter-spacing"))+3});
+            });
+            $("#parrafo3").click(function() {
+                $(this).css({"font-size" : parseInt($(this).css("font-size"))+3, "letter-spacing" : parseInt($(this).css("letter-spacing"))+3});
+            });
+        });
+
+    </script>
+</body>
+
+</html>

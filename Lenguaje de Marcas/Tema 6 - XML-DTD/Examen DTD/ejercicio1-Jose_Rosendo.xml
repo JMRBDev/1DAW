@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Jose Rosendo Bienvenido 1ºDAW B-->
+<!DOCTYPE pedidos [
+    <!ELEMENT pedidos (pedido)+>
+    <!ELEMENT pedido (proveedor, producto+)>
+    <!ATTLIST pedido numPedido CDATA #REQUIRED>
+    <!ELEMENT proveedor (nombre, direccion, telefono)>
+    <!ATTLIST proveedor cif CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT direccion (calle, num, cp, localidad)>
+    <!ELEMENT calle (#PCDATA)>
+    <!ELEMENT num (CDATA)>
+    <!ELEMENT cp (#PCDATA)>
+    <!ELEMENT localidad (#PCDATA)>
+    <!ELEMENT telefono (CDATA)>
+    <!ATTLIST telefono tipo (fijo|movil) "fijo">
+    <!ELEMENT producto (numUnidades, capacidad, precio)>
+    <!ATTLIST producto nombre (RAM|MICRO|HD|SSD) #REQUIRED>
+    <!ELEMENT numUnidades (CDATA)>
+    <!ELEMENT capacidad (CDATA)>
+    <!ELEMENT precio (CDATA)>
+]>
+
+<pedidos>
+    <pedido numPedido="N123">
+        <proveedor cif="000000A">
+            <nombre>Manolo García</nombre>
+            <direccion>
+                <calle>Roca</calle>
+                <num>21</num>
+                <cp>67355</cp>
+                <localidad>Badalona</localidad>
+            </direccion>
+            <telefono tipo="fijo">95685758</telefono>
+        </proveedor>
+        <producto nombre="SSD">
+            <numUnidades>3</numUnidades>
+            <capacidad>120</capacidad>
+            <precio>25</precio>
+        </producto>
+        <producto nombre="MICRO">
+            <numUnidades>1</numUnidades>
+            <capacidad></capacidad>
+            <precio>123</precio>
+        </producto>
+    </pedido>
+</pedidos>

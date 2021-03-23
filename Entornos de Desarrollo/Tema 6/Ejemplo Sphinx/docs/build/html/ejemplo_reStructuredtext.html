@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>ejemplo_reStructuredtext module &#8212; documentación de Ejemplos - v0.0.1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-ejemplo_reStructuredtext">
+<span id="ejemplo-restructuredtext-module"></span><h1>ejemplo_reStructuredtext module<a class="headerlink" href="#module-ejemplo_reStructuredtext" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>This module illustrates how to write your docstring in OpenAlea
+and other projects related to OpenAlea.</p>
+<dl class="py class">
+<dt id="ejemplo_reStructuredtext.MainClass1">
+<em class="property">class </em><code class="sig-prename descclassname">ejemplo_reStructuredtext.</code><code class="sig-name descname">MainClass1</code><a class="reference internal" href="_modules/ejemplo_reStructuredtext.html#MainClass1"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#ejemplo_reStructuredtext.MainClass1" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class docstring shows how to use sphinx and rst syntax</p>
+<p>The first line is brief explanation, which may be completed with
+a longer one. For instance to discuss about its methods. The only
+method here is <a class="reference internal" href="#ejemplo_reStructuredtext.MainClass1.function1" title="ejemplo_reStructuredtext.MainClass1.function1"><code class="xref py py-func docutils literal notranslate"><span class="pre">function1()</span></code></a>”s. The main idea is to document
+the class and methods’s arguments with</p>
+<ul>
+<li><p><strong>parameters</strong>, <strong>types</strong>, <strong>return</strong> and <strong>return types</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">param</span> <span class="n">arg1</span><span class="p">:</span> <span class="n">description</span>
+<span class="p">:</span><span class="n">param</span> <span class="n">arg2</span><span class="p">:</span> <span class="n">description</span>
+<span class="p">:</span><span class="nb">type</span> <span class="n">arg1</span><span class="p">:</span> <span class="nb">type</span> <span class="n">description</span>
+<span class="p">:</span><span class="nb">type</span> <span class="n">arg1</span><span class="p">:</span> <span class="nb">type</span> <span class="n">description</span>
+<span class="p">:</span><span class="k">return</span><span class="p">:</span> <span class="k">return</span> <span class="n">description</span>
+<span class="p">:</span><span class="n">rtype</span><span class="p">:</span> <span class="n">the</span> <span class="k">return</span> <span class="nb">type</span> <span class="n">description</span>
+</pre></div>
+</div>
+</li>
+<li><p>and to provide sections such as <strong>Example</strong> using the double commas syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:Example:
+
+followed by a blank line !
+</pre></div>
+</div>
+<p>which appears as follow:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>followed by a blank line</p>
+</li>
+<li><p>Finally special sections such as <strong>See Also</strong>, <strong>Warnings</strong>, <strong>Notes</strong>
+use the sphinx syntax (<em>paragraph directives</em>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">seealso</span><span class="p">::</span> <span class="n">blabla</span>
+<span class="o">..</span> <span class="n">warnings</span> <span class="n">also</span><span class="p">::</span> <span class="n">blabla</span>
+<span class="o">..</span> <span class="n">note</span><span class="p">::</span> <span class="n">blabla</span>
+<span class="o">..</span> <span class="n">todo</span><span class="p">::</span> <span class="n">blabla</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<dl class="simple">
+<dt>There are many other Info fields but they may be redundant:</dt><dd><ul class="simple">
+<li><p>param, parameter, arg, argument, key, keyword: Description of a
+parameter.</p></li>
+<li><p>type: Type of a parameter.</p></li>
+<li><p>raises, raise, except, exception: That (and when) a specific
+exception is raised.</p></li>
+<li><p>var, ivar, cvar: Description of a variable.</p></li>
+<li><p>returns, return: Description of the return value.</p></li>
+<li><p>rtype: Return type.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>There are many other directives such as versionadded, versionchanged,
+rubric, centered, … See the sphinx documentation for more details.</p>
+</div>
+<p>Here below is the results of the <a class="reference internal" href="#ejemplo_reStructuredtext.MainClass1.function1" title="ejemplo_reStructuredtext.MainClass1.function1"><code class="xref py py-func docutils literal notranslate"><span class="pre">function1()</span></code></a> docstring.</p>
+<dl class="py method">
+<dt id="ejemplo_reStructuredtext.MainClass1.function1">
+<code class="sig-name descname">function1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg1</span></em>, <em class="sig-param"><span class="n">arg2</span></em>, <em class="sig-param"><span class="n">arg3</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ejemplo_reStructuredtext.html#MainClass1.function1"><span class="viewcode-link">[fuente]</span></a><a class="headerlink" href="#ejemplo_reStructuredtext.MainClass1.function1" title="Enlazar permanentemente con esta definición">¶</a></dt>
+<dd><p>returns (arg1 / arg2) + arg3</p>
+<p>This is a longer explanation, which may include math with latex syntax
+<span class="math notranslate nohighlight">\(\alpha\)</span>.
+Then, you need to provide optional subsection in this order (just to be
+consistent and have a uniform documentation. Nothing prevent you to
+switch the order):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>parameters using <code class="docutils literal notranslate"><span class="pre">:param</span> <span class="pre">&lt;name&gt;:</span> <span class="pre">&lt;description&gt;</span></code></p></li>
+<li><p>type of the parameters <code class="docutils literal notranslate"><span class="pre">:type</span> <span class="pre">&lt;name&gt;:</span> <span class="pre">&lt;description&gt;</span></code></p></li>
+<li><p>returns using <code class="docutils literal notranslate"><span class="pre">:returns:</span> <span class="pre">&lt;description&gt;</span></code></p></li>
+<li><p>examples (doctest)</p></li>
+<li><p>seealso using <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">seealso::</span> <span class="pre">text</span></code></p></li>
+<li><p>notes using <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">note::</span> <span class="pre">text</span></code></p></li>
+<li><p>warning using <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">warning::</span> <span class="pre">text</span></code></p></li>
+<li><p>todo <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">todo::</span> <span class="pre">text</span></code></p></li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt><strong>Advantages</strong>:</dt><dd><ul class="simple">
+<li><p>Uses sphinx markups, which will certainly be improved in future
+version</p></li>
+<li><p>Nice HTML output with the See Also, Note, Warnings directives</p></li>
+</ul>
+</dd>
+<dt><strong>Drawbacks</strong>:</dt><dd><ul class="simple">
+<li><p>Just looking at the docstring, the parameter, type and  return
+sections do not appear nicely</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arg1</strong> (<em>int</em><em>, </em><em>float</em><em>,</em><em>..</em>) – the first value</p></li>
+<li><p><strong>arg2</strong> (<em>int</em><em>, </em><em>float</em><em>,</em><em>..</em>) – the first value</p></li>
+<li><p><strong>arg3</strong> (<em>int</em><em>, </em><em>float</em><em>,</em><em>..</em>) – the first value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve</dt>
+<dd class="field-even"><p>arg1/arg2 +arg3</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto</dt>
+<dd class="field-odd"><p>int, float</p>
+</dd>
+<dt class="field-even">Example</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">template</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">MainClass1</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">function1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">2</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>can be useful to emphasize
+important feature</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">Ver también</p>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">MainClass2</span></code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>arg2 must be non-zero.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Ejemplos</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, JMRBDev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/ejemplo_reStructuredtext.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

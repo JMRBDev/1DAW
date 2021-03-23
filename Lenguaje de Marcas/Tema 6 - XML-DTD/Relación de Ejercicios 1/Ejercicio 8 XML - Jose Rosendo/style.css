@@ -1,0 +1,31 @@
+/* Jose Rosendo */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+ies {
+    margin: 10px;
+}
+
+nombreCentro {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+}
+
+web {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+ciclo {
+    font-size: 21px;
+    margin-left: 10px;
+}
+
+grado:before, decretoTitulo:before {
+    content:"• ";
+}

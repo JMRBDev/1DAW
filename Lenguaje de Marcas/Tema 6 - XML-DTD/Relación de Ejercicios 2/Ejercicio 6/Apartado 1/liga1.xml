@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE note SYSTEM "liga1.dtd">
+<!-- Jose Rosendo Bienvenido -->
+<liga>
+    <partido>
+        <equipoLocal>Nottingham Presa</equipoLocal>
+        <equipoVisitante>Inter de Mitente</equipoVisitante>
+        <golesEquipoLocal>0</golesEquipoLocal>
+        <golesEquipoVisitante>1</golesEquipoVisitante>
+    </partido>
+
+    <partido>
+        <equipoLocal>Vodka Juniors</equipoLocal>
+        <equipoVisitante> Sparta da Risa</equipoVisitante>
+        <golesEquipoLocal>3</golesEquipoLocal>
+        <golesEquipoVisitante>3</golesEquipoVisitante>
+    </partido>
+
+    <partido>
+        <equipoLocal>Water de Munich</equipoLocal>
+        <equipoVisitante>Esteaua es del grifo</equipoVisitante>
+        <golesEquipoLocal>4</golesEquipoLocal>
+        <golesEquipoVisitante>2</golesEquipoVisitante>
+    </partido>
+</liga>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>4ª Relación de Ejercicios - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Rosendo">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <p id="logo">JOSE ROSENDO</p>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="assets/JS-Relacion_4-Jose_Rosendo.zip">Descargar</a></li>
+        </ul>
+    </nav>
+    <div id="tablaEjercicios">
+
+    </div>
+
+    <script type="text/javascript">
+        var files = ['practicas/01_primer_ultimo_dia_semana.html', 'practicas/02_meses_año.html', 'practicas/05_variacion_dias_semana.html', 'practicas/06_variacion_dias_semana_2.html', 'practicas/08_suma_a_todos.html', 'practicas/09_media_de_array.html',
+                     'practicas/10+11_cantidad_de_primos.html', 'practicas/12_ventas_totales.html'];
+        for (i = 0; i < files.length; i++) {
+            document.getElementById('tablaEjercicios').innerHTML += '<a href="../'+files[i]+'" target="_blank">'+files[i].split('/')[1]+'</a></br>';
+        }
+    </script>
+</body>
+
+</html>

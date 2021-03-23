@@ -1,0 +1,24 @@
+/* Jose Rosendo */
+
+* {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+libro {
+    margin: 10px;
+    display: block;
+    background-color: #4aff6b;
+    border: 2px black solid;
+    text-align: left;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+titulo {
+    font-weight: 700;
+}
+
+titulo, autor, fechaPublicacion {
+    display: block;
+}

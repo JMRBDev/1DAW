@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 15 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 15 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <button id="setText">Set text</button>
+    <button id="setHTML">Set HTML</button>
+    <button id="setVal">Set value</button>
+    <p id="parrafo1">Parrafo 1</p><br />
+    <p id="parrafo2"> Parrafo 2</p><br />
+    <input type="text" name="campoTexto" id="campoTexto">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#setText").click(function() {
+                $("#parrafo1").text("Hola Mundo");
+            });
+            $("#setHTML").click(function() {
+                $("#parrafo2").text("Hola Mundo").css("font-weight", "bold");
+            });
+            $("#setVal").click(function() {
+                $("#campoTexto").val("Hola Mundo");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 6 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 6 de JavaScript</h1>
+    <h2>Relación 4 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        function diasSemana() {
+            var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+
+            document.write('La semana tiene ' + dias.length + ' días, y son: ' + dias);
+            document.write('</br></br>Si extraemos el primer elemento de la tabla, que es: ' + dias[0] + ', obtenemos lo siguiente...');
+            dias.shift();
+            document.write('</br>La semana tiene ' + dias.length + ' días, y son: ' + dias);
+            document.write('</br></br>Si añadimos el elemento Sunday al final, obtenemos lo siguiente...');
+            dias.push('Sunday');
+            document.write('</br>La semana tiene ' + dias.length + ' días, y son: ' + dias);
+        }
+
+        diasSemana();
+    </script>
+</body>
+
+</html>

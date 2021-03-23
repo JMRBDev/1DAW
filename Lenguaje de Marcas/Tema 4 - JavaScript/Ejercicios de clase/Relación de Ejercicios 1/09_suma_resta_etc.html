@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 9 de JavaScript - Jose Rosendo</title>
+        <meta charset="UTF-8">
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+</head>
+
+    <body>
+        <h1>Ejercicio 9 de JavaScript</h1>
+        <h2>Relación 1 de ejercicios de Moodle</h2>
+        <hr>
+        <p>Jose Rosendo</p>
+        <hr>
+
+        <div>
+            <p id="suma"></p>
+            <p id="resta"></p>
+            <p id="multiplicacion"></p>
+            <p id="division"></p>
+
+            <script type="text/javascript">
+                var num1 = parseInt(7);
+                var num2 = parseInt(4);
+                var suma = num1 + num2;
+                var resta = num1 - num2;
+                var multiplicacion = num1 * num2;
+                var division = num1 / num2;
+                document.getElementById("suma").innerHTML = "La suma de " + num1 + " + " + num2 + " es: " + suma;
+                document.getElementById("resta").innerHTML = "La resta de " + num1 + " - " + num2 + " es: " + resta;
+                document.getElementById("multiplicacion").innerHTML = "La multiplicación de " + num1 + " * " + num2 + " es: " + multiplicacion;
+                document.getElementById("division").innerHTML = "La división de " + num1 + " / " + num2 + " es: " + division;
+            </script>
+
+        </div> 
+    </body>
+</html>

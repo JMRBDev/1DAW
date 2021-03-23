@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 42 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;    
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 42 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <form name="formulario">
+        <label for="input1">Text</label>
+        <input type="text" name="input1"><br />
+        <label for="input2">Password</label>
+        <input type="password" name="input2"><br />
+        <label for="input3">Date</label>
+        <input type="date" name="input3"><br />
+        <label for="input4">Text</label>
+        <input type="text" name="input4"><br />
+        <label for="input3">Radio</label>
+        <input type="radio" name="radio"><br />
+        <label for="check">Checkbox</label>
+        <input type="checkbox" name="check"><br />
+    </form>
+    <button id="resaltar">Resaltar</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#resaltar").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("type") == "text" || $(this).attr("type") == "password") {
+                        $(this).css("background-color", "red");
+                    }
+                    if ($(this).attr("type") == "radio" || $(this).attr("type") == "checkbox") {
+                        $(this).wrap("<span></span>")
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

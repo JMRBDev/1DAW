@@ -1,0 +1,27 @@
+/* Jose Rosendo */
+
+* {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nombreCentro {
+    float: left;
+}
+
+web {
+    float: right;
+}
+
+ciclos {
+    margin: 10px 200px;
+}
+
+ciclo {
+    float: left;
+    text-align: left;
+    background-color: #adffbc;
+    margin: 5px;
+    max-width: max-content;
+    border: 1px black solid
+}

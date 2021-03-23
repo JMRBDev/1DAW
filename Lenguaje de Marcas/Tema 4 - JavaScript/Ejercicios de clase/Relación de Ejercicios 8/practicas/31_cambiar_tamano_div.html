@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 31 de JQuery - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;    
+        }
+
+        #seccion {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 31 de JQuery</h1>
+    <h2>Relación 8 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <div id="seccion">
+        <p>Esto es una seccion</p>
+    </div>
+    <br />
+    <button id="cambiarTamaño">Obtener tamaño</button>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#cambiarTamaño").click(function() {
+                $("#seccion").width("500px");
+                $("#seccion").height("500px");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

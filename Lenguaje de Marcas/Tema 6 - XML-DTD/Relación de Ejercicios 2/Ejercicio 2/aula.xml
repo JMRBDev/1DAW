@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE note SYSTEM "aula.dtd">
+<!-- Jose Rosendo Bienvenido -->
+<aula>
+	<alumno dni='77453746T'>
+		<nombre>Juan</nombre>
+		<apellidos>Gómez García</apellidos>
+		<sexo>H</sexo>
+		<fNacimiento zodiaco='piscis'>01/03/1998</fNacimiento>
+		<direccion>Calle Roca Nº 3</direccion>
+		<telefono tipo='fijo'>856098384</telefono>
+		<notaMedia>8,5</notaMedia>
+	</alumno>
+	<alumno dni='88354635R'>
+		<nombre>Julia</nombre>
+		<apellidos>Pérez Rufián</apellidos>
+		<sexo>M</sexo>
+		<fNacimiento zodiaco='capricornio'>12/01/1999</fNacimiento>
+		<direccion>Calle Tamaríz Nº 54</direccion>
+		<telefono tipo='fijo'>856746565</telefono>
+		<notaMedia>8,9</notaMedia>
+	</alumno>
+	<alumno dni='91564736H'>
+		<nombre>Manuel</nombre>
+		<apellidos>Ander Augusto</apellidos>
+		<sexo>H</sexo>
+		<fNacimiento zodiaco='virgo'>23/08/1996</fNacimiento>
+		<direccion>Plaza España Nº 2</direccion>
+		<telefono tipo='movil'>635854474</telefono>
+		<notaMedia>6,1</notaMedia>
+	</alumno>
+	<alumno dni='63746586Y'>
+		<nombre>Francisca</nombre>
+		<apellidos>Guzmán Pereira</apellidos>
+		<sexo>M</sexo>
+		<fNacimiento zodiaco='sagitario'>21/12/2000</fNacimiento>
+		<direccion>Calle Playero Nº21</direccion>
+		<telefono tipo='fijo'>956452854</telefono>
+		<notaMedia>4,6</notaMedia>
+	</alumno>
+	<alumno dni='77397645B'>
+		<nombre>Jose</nombre>
+		<apellidos>Rosendo Bienvenido</apellidos>
+		<sexo>H</sexo>
+		<fNacimiento zodiaco='cancer'>30/06/1999</fNacimiento>
+		<direccion>Calle La Rosa Nº 47</direccion>
+		<telefono tipo='movil'>634133758</telefono>
+		<notaMedia>9,8</notaMedia>
+	</alumno>
+</aula>

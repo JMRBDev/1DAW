@@ -1,0 +1,13 @@
+<!ELEMENT aula (alumno+)>
+<!ELEMENT alumno (nombre,apellidos,sexo,fNacimiento,direccion,telefono,notaMedia)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT fNacimiento (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT notaMedia (CDATA)>
+
+<!ATTLIST alumno dni ID #REQUIRED>
+<!ATTLIST fNacimiento zodiaco (aries|tauro|geminis|cancer|leo|virgo|libra|scorpio|sagitario|capricornio|acuario|piscis) #IMPLIED >
+<!ATTLIST telefono tipo (fijo|movil) "movil">

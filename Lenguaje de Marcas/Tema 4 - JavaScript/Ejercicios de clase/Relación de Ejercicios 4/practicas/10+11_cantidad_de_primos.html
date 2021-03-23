@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicios 10 + 11 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicios 10 + 11 de JavaScript</h1>
+    <h2>Relación 4 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <script type="text/javascript">
+        function cantidadDePrimos() {
+            var miArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            var imprimir = [];
+            for (var i = 0; i < miArray.length; i++) {
+                if (esPrimo(miArray[i]) == true) {
+                    imprimir.push(miArray[i]);
+                }
+            }
+
+            return 'El aray ' + miArray + ' contiene ' + imprimir.length + ' primos, que son: ' + imprimir;
+        }
+
+        function esPrimo(num) {
+            for (i = 2; i < num; i++) {
+                if (num % i != 0) {
+                    return true;
+                }
+                else if (num % i == 0) {
+                    return false;
+                }
+            }
+        }
+
+        document.write(cantidadDePrimos());
+    </script>
+</body>
+
+</html>

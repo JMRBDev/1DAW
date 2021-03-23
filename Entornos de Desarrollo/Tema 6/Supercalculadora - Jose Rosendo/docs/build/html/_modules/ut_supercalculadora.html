@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>ut_supercalculadora &#8212; documentación de Supercalculadora - v0.0.1</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Código fuente para ut_supercalculadora</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">supercalculadora</span>
+<span class="kn">import</span> <span class="nn">expr_aritmetica</span>
+<span class="kn">import</span> <span class="nn">ut_calculadora</span>
+<span class="kn">import</span> <span class="nn">ut_expr_aritmetica</span>
+
+
+<span class="c1"># class TestsSupercalculadora(unittest.TestCase):</span>
+<span class="c1">#     def test_sumar(self):</span>
+<span class="c1">#         sc = supercalculadora.Supercalculadora(</span>
+<span class="c1">#             expr_aritmetica.ExprAritmetica())</span>
+<span class="c1">#         self.assertEqual(&quot;4&quot;, sc.calcular(&quot;2 + 2&quot;))</span>
+
+<span class="c1">#     def test_restar(self):</span>
+<span class="c1">#         sc = supercalculadora.Supercalculadora(</span>
+<span class="c1">#             expr_aritmetica.ExprAritmetica())</span>
+<span class="c1">#         self.assertEqual(&quot;0&quot;, sc.calcular(&quot;2 - 2&quot;))</span>
+
+<span class="c1">#     def test_expresion_compleja_sin_parentesis_sin_precedencia(self):</span>
+<span class="c1">#         sc = supercalculadora.Supercalculadora(</span>
+<span class="c1">#             expr_aritmetica.ExprAritmetica())</span>
+<span class="c1">#         self.assertEqual(&quot;6&quot;, sc.calcular(&quot;5 + 4 - 3&quot;))</span>
+
+<span class="c1">#     def test_expresion_compleja_sin_parentesis_con_precedencia(self):</span>
+<span class="c1">#         sc = supercalculadora.Supercalculadora(</span>
+<span class="c1">#             expr_aritmetica.ExprAritmetica())</span>
+<span class="c1">#         self.assertEqual(&quot;3&quot;, sc.calcular(&quot;5 + 4 / 2 - 4&quot;))</span>
+
+
+<div class="viewcode-block" id="TestsSupercalculadora"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora">[documentos]</a><span class="k">class</span> <span class="nc">TestsSupercalculadora</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="TestsSupercalculadora.setUp"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.setUp">[documentos]</a>    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s2">&quot;añadido setup y teardown debajo&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sc</span> <span class="o">=</span> <span class="n">supercalculadora</span><span class="o">.</span><span class="n">Supercalculadora</span><span class="p">(</span>
+            <span class="n">expr_aritmetica</span><span class="o">.</span><span class="n">ExprAritmetica</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="TestsSupercalculadora.tearDown"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.tearDown">[documentos]</a>    <span class="k">def</span> <span class="nf">tearDown</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span></div>
+
+<div class="viewcode-block" id="TestsSupercalculadora.test_sumar"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.test_sumar">[documentos]</a>    <span class="k">def</span> <span class="nf">test_sumar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;2 + 2&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestsSupercalculadora.test_restar"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.test_restar">[documentos]</a>    <span class="k">def</span> <span class="nf">test_restar</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;2 - 2&quot;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestsSupercalculadora.test_expresion_compleja_sin_parentesis_sin_precedencia"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.test_expresion_compleja_sin_parentesis_sin_precedencia">[documentos]</a>    <span class="k">def</span> <span class="nf">test_expresion_compleja_sin_parentesis_sin_precedencia</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;5 + 4 - 3&quot;</span><span class="p">))</span></div>
+
+<span class="c1"># añade función de simplificar</span>
+<div class="viewcode-block" id="TestsSupercalculadora.test_expresion_compleja_sin_parentesis_con_precedencia"><a class="viewcode-back" href="../ut_supercalculadora.html#ut_supercalculadora.TestsSupercalculadora.test_expresion_compleja_sin_parentesis_con_precedencia">[documentos]</a>    <span class="k">def</span> <span class="nf">test_expresion_compleja_sin_parentesis_con_precedencia</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;5 + 4 / 2 - 4&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;-1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;4 / 2 - 3&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;4 / 2 - 3 + 1 + 6 / 3 - 1&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+            <span class="s2">&quot;-8&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sc</span><span class="o">.</span><span class="n">calcular</span><span class="p">(</span><span class="s2">&quot;4 / -2 + 3 + -1 + -6 / -3 - 10&quot;</span><span class="p">))</span></div></div>
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Supercalculadora</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegación</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Código de módulo</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, JMRBDev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

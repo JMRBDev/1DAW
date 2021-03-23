@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio 15 de JavaScript - Jose Rosendo</title>
+        <meta charset="UTF-8">
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+</head>
+
+    <body>
+        <h1>Ejercicio 15 de JavaScript</h1>
+        <h2>Relación 1 de ejercicios de Moodle</h2>
+        <hr>
+        <p>Jose Rosendo</p>
+
+        <p id="showCode"></p>
+        <script type="text/javascript">
+            var userCode = prompt("Introduzca su código de usuario", "anonymous");
+            document.write("Document Write: " + userCode);
+            alert("Alert: " + userCode);
+            document.getElementById("showCode").innerHTML = "innerHTML: " + userCode;
+        </script>
+    </body>
+</html>

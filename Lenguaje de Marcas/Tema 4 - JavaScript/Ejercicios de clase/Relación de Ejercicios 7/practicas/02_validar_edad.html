@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejercicio 2 de JavaScript - Jose Rosendo</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            background-color: red;
+            color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio 2 de JavaScript</h1>
+    <h2>Relación 7 de ejercicios de Moodle</h2>
+    <hr>
+    <p>Jose Rosendo</p>
+    <form name="clienteFormulario">
+        <fieldset>
+            <legend>Cliente:</legend>
+            <label for="clienteNombre">Nombre: </label>
+            <input type="text" name="clienteNombre" id="clienteNombre"><br /><br />
+            <label for="clienteApellidos">Apellidos: </label>
+            <input type="text" name="clienteApellidos" id="clienteApellidos"><br /><br />
+            <label for="clienteFecha">Fecha de Nacimiento: </label>
+            <input type="text" name="clienteFecha" id="clienteFecha"><br />
+        </fieldset>
+        <fieldset>
+            <legend>Domicilio:</legend>
+            <label for="domicilioCalle">Calle: </label>
+            <input type="text" name="domicilioCalle" id="domicilioCalle"><br /><br />
+            <label for="domicilioNumero">Numero: </label>
+            <input type="text" name="domicilioNumero" id="domicilioNumero"><br /><br />
+            <label for="domicilioCP">C.P: </label>
+            <input type="text" name="domicilioCP" id="domicilioCP"><br />
+        </fieldset><br /><br />
+        <input type="button" value="Enviar" onclick="comprobarEdad();">
+
+    <script type="text/javascript">
+        function comprobarEdad() {
+            var edad = document.getElementById("clienteFecha").value.split("/");
+            var today = new Date();
+            var day = today.getDate();
+            var month = today.getMonth() + 1;
+            var year = today.getFullYear();
+            if (day < 10) {
+                day = "0" + day;
+            }
+            if (month < 10) {
+                month = "0" + month;
+            }
+            today = [day, month, year];
+            if (today[2] - edad[2] >= 1 && today[2] - edad[2] <= 100) {
+                alert("El cliente tiene entre 1 y 100 años.");
+            }else{
+                alert("El cliente no tiene entre 1 y 100 años.")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

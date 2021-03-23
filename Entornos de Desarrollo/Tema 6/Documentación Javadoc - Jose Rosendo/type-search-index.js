@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.jmrbdev.tictactoe","l":"Client"},{"p":"com.jmrbdev.tictactoe","l":"Conexion"},{"p":"com.jmrbdev.tictactoe","l":"Main"},{"p":"com.jmrbdev.tictactoe","l":"MainClient"},{"p":"com.jmrbdev.tictactoe","l":"MainServer"},{"p":"com.jmrbdev.tictactoe","l":"Server"}]
